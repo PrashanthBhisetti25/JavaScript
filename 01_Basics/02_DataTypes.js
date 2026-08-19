@@ -62,3 +62,29 @@ const myFun = function(){
 
 console.table([typeof heros,typeof student,typeof myFun]);
 console.table([heros,student,myFun()]);
+
+
+//------------------Memory ---------------------
+/*
+2 types of memories: 1. Stack (Primitive (non - reference type)) and 2. Heap (Heap  (reference type))
+
+*/
+
+let myYoutubeName = "soundsGood";
+let anotherYoutubeName = myYoutubeName;
+anotherYoutubeName = "takemytips";
+
+console.table([myYoutubeName,anotherYoutubeName]);
+
+let userOne = {
+    "email": "prashu@gmail.com",
+    "upiId":"user@ybl",
+    "number":8329373723 
+
+}
+
+let userTwo = userOne;
+
+userTwo.email = "Prashanth@gmail.com";
+console.table([userOne.email,userTwo.email]);
+//here userone is stored in stack and the object is stored in the heap memory so , userOne is reference of object
